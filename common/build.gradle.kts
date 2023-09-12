@@ -64,7 +64,9 @@ dependencies {
 
     //Dagger - hilt
     implementation("com.google.dagger:hilt-android:2.44.2")
-  kapt("com.google.dagger:hilt-compiler:2.44.2")
+    kapt("com.google.dagger:hilt-compiler:2.44.2")
+    implementation ("androidx.hilt:hilt-navigation-compose:1.0.0")
+    kapt("androidx.hilt:hilt-compiler:1.0.0")
 
     //retrofit
     implementation ("com.squareup.retrofit2:retrofit:2.9.0")
@@ -77,8 +79,7 @@ dependencies {
     implementation ("com.squareup.okhttp3:okhttp:5.0.0-alpha.11")
     implementation ("com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.1")
 
-    //image loading
-    implementation ("io.coil-kt:coil:2.3.0")
+
 
     //system ui controller
     implementation ("com.google.accompanist:accompanist-systemuicontroller:0.17.0")
