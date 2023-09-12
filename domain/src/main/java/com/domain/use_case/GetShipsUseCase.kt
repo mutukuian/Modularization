@@ -17,6 +17,7 @@ class GetShipsUseCase @Inject constructor(
         try {
             emit(Resource.Loading<List<Ships>>())
             val ships = repository.getAllShips().map{it.toShips()}
+            emit(Resource.Success<List<Ships>>(ships))
         }
         catch (e:HttpException){
             emit(Resource.Error<List<Ships>>(e.localizedMessage?:"An unexpected error occurred"))
